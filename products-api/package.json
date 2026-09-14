@@ -1,0 +1,15 @@
+{
+  "name": "products-api-workspace",
+  "private": true,
+  "type": "module",
+  "workspaces": ["packages/contracts"],
+  "engines": {"node": ">=24"},
+  "scripts": {
+    "start": "node src/server.ts",
+    "test": "node --test test/*.test.ts",
+    "test:thunder": "tc --col \"Products API\" --env \"Products Local\" --report cli,json",
+    "verify": "tsc --noEmit && npm test"
+  },
+  "dependencies": {"@products/contracts": "*", "zod": "^4.0.0"},
+  "devDependencies": {"@types/node": "^24.0.0", "typescript": "^5.9.0", "@thunderclient/cli": "^1.0.0"}
+}

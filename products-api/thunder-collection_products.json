@@ -1,0 +1,394 @@
+{
+  "clientName": "Thunder Client",
+  "collectionName": "Products API",
+  "collectionId": "f93acc5f-6aa6-4e73-8028-d44d9793e39b",
+  "version": "1.2",
+  "dateExported": "2026-09-08T07:07:31.572Z",
+  "folders": [],
+  "requests": [
+    {
+      "_id": "b7a8c74b-2aa3-4cdd-916b-7002be4b7f92",
+      "colId": "f93acc5f-6aa6-4e73-8028-d44d9793e39b",
+      "containerId": "",
+      "name": "01 List products",
+      "url": "http://localhost:3001/api/products",
+      "method": "GET",
+      "sortNum": 0,
+      "created": "2026-09-08T07:07:31.572Z",
+      "modified": "2026-09-08T07:07:31.572Z",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "params": [],
+      "tests": [
+        {
+          "type": "res-code",
+          "custom": "",
+          "action": "equal",
+          "value": "200"
+        }
+      ]
+    },
+    {
+      "_id": "9814fa3e-5387-4e36-ac26-5698c23ff3e8",
+      "colId": "f93acc5f-6aa6-4e73-8028-d44d9793e39b",
+      "containerId": "",
+      "name": "02 Create product",
+      "url": "http://localhost:3001/api/products",
+      "method": "POST",
+      "sortNum": 10000,
+      "created": "2026-09-08T07:07:31.572Z",
+      "modified": "2026-09-08T07:07:31.572Z",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "params": [],
+      "body": {
+        "type": "json",
+        "raw": "{\"name\":\"Keyboard\",\"price\":49.99,\"stock\":5}",
+        "form": []
+      },
+      "tests": [
+        {
+          "type": "res-code",
+          "custom": "",
+          "action": "equal",
+          "value": "201"
+        },
+        {
+          "type": "set-env-var",
+          "custom": "json.id",
+          "action": "setto",
+          "value": "{{productId}}"
+        }
+      ]
+    },
+    {
+      "_id": "b79c2160-84a4-4ad1-bdc5-186475b3f9a4",
+      "colId": "f93acc5f-6aa6-4e73-8028-d44d9793e39b",
+      "containerId": "",
+      "name": "03 Get product",
+      "url": "http://localhost:3001/api/products/{{productId}}",
+      "method": "GET",
+      "sortNum": 20000,
+      "created": "2026-09-08T07:07:31.572Z",
+      "modified": "2026-09-08T07:07:31.572Z",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "params": [],
+      "tests": [
+        {
+          "type": "res-code",
+          "custom": "",
+          "action": "equal",
+          "value": "200"
+        }
+      ]
+    },
+    {
+      "_id": "10047fca-e689-4a5e-9e9c-40b421149018",
+      "colId": "f93acc5f-6aa6-4e73-8028-d44d9793e39b",
+      "containerId": "",
+      "name": "04 Replace product",
+      "url": "http://localhost:3001/api/products/{{productId}}",
+      "method": "PUT",
+      "sortNum": 30000,
+      "created": "2026-09-08T07:07:31.572Z",
+      "modified": "2026-09-08T07:07:31.572Z",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "params": [],
+      "body": {
+        "type": "json",
+        "raw": "{\"name\":\"Mouse\",\"price\":20}",
+        "form": []
+      },
+      "tests": [
+        {
+          "type": "res-code",
+          "custom": "",
+          "action": "equal",
+          "value": "200"
+        }
+      ]
+    },
+    {
+      "_id": "9ee8b750-e8d0-4425-b0c9-41ea6bb27b47",
+      "colId": "f93acc5f-6aa6-4e73-8028-d44d9793e39b",
+      "containerId": "",
+      "name": "05 Patch product",
+      "url": "http://localhost:3001/api/products/{{productId}}",
+      "method": "PATCH",
+      "sortNum": 40000,
+      "created": "2026-09-08T07:07:31.572Z",
+      "modified": "2026-09-08T07:07:31.572Z",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "params": [],
+      "body": {
+        "type": "json",
+        "raw": "{\"stock\":8}",
+        "form": []
+      },
+      "tests": [
+        {
+          "type": "res-code",
+          "custom": "",
+          "action": "equal",
+          "value": "200"
+        }
+      ]
+    },
+    {
+      "_id": "b3daf563-5f44-45d9-a6af-3f5a144061c2",
+      "colId": "f93acc5f-6aa6-4e73-8028-d44d9793e39b",
+      "containerId": "",
+      "name": "06 Reject negative price",
+      "url": "http://localhost:3001/api/products",
+      "method": "POST",
+      "sortNum": 50000,
+      "created": "2026-09-08T07:07:31.572Z",
+      "modified": "2026-09-08T07:07:31.572Z",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "params": [],
+      "body": {
+        "type": "json",
+        "raw": "{\"name\":\"Bad\",\"price\":-1}",
+        "form": []
+      },
+      "tests": [
+        {
+          "type": "res-code",
+          "custom": "",
+          "action": "equal",
+          "value": "400"
+        }
+      ]
+    },
+    {
+      "_id": "e7ca76b1-1e26-4098-9905-8336e5a9cc51",
+      "colId": "f93acc5f-6aa6-4e73-8028-d44d9793e39b",
+      "containerId": "",
+      "name": "07 Reject empty patch",
+      "url": "http://localhost:3001/api/products/{{productId}}",
+      "method": "PATCH",
+      "sortNum": 60000,
+      "created": "2026-09-08T07:07:31.572Z",
+      "modified": "2026-09-08T07:07:31.572Z",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "params": [],
+      "body": {
+        "type": "json",
+        "raw": "{}",
+        "form": []
+      },
+      "tests": [
+        {
+          "type": "res-code",
+          "custom": "",
+          "action": "equal",
+          "value": "400"
+        }
+      ]
+    },
+    {
+      "_id": "1fd7c3dd-a44c-4a19-820d-4ff5ae203df5",
+      "colId": "f93acc5f-6aa6-4e73-8028-d44d9793e39b",
+      "containerId": "",
+      "name": "08 Reject malformed JSON",
+      "url": "http://localhost:3001/api/products",
+      "method": "POST",
+      "sortNum": 70000,
+      "created": "2026-09-08T07:07:31.572Z",
+      "modified": "2026-09-08T07:07:31.572Z",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "params": [],
+      "body": {
+        "type": "json",
+        "raw": "{",
+        "form": []
+      },
+      "tests": [
+        {
+          "type": "res-code",
+          "custom": "",
+          "action": "equal",
+          "value": "400"
+        }
+      ]
+    },
+    {
+      "_id": "fe5426bf-a08e-4351-8728-05af7f18e00b",
+      "colId": "f93acc5f-6aa6-4e73-8028-d44d9793e39b",
+      "containerId": "",
+      "name": "09 Reject content type",
+      "url": "http://localhost:3001/api/products",
+      "method": "POST",
+      "sortNum": 80000,
+      "created": "2026-09-08T07:07:31.572Z",
+      "modified": "2026-09-08T07:07:31.572Z",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "text/plain"
+        }
+      ],
+      "params": [],
+      "body": {
+        "type": "json",
+        "raw": "{}",
+        "form": []
+      },
+      "tests": [
+        {
+          "type": "res-code",
+          "custom": "",
+          "action": "equal",
+          "value": "415"
+        }
+      ]
+    },
+    {
+      "_id": "cf618863-7ecc-4d44-ae4f-7e30a4c9c5c8",
+      "colId": "f93acc5f-6aa6-4e73-8028-d44d9793e39b",
+      "containerId": "",
+      "name": "10 Reject unsupported method",
+      "url": "http://localhost:3001/api/products",
+      "method": "PUT",
+      "sortNum": 90000,
+      "created": "2026-09-08T07:07:31.572Z",
+      "modified": "2026-09-08T07:07:31.572Z",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "params": [],
+      "body": {
+        "type": "json",
+        "raw": "{}",
+        "form": []
+      },
+      "tests": [
+        {
+          "type": "res-code",
+          "custom": "",
+          "action": "equal",
+          "value": "405"
+        }
+      ]
+    },
+    {
+      "_id": "a19271c1-fcbf-4197-b6f7-f296d4696994",
+      "colId": "f93acc5f-6aa6-4e73-8028-d44d9793e39b",
+      "containerId": "",
+      "name": "11 Delete product",
+      "url": "http://localhost:3001/api/products/{{productId}}",
+      "method": "DELETE",
+      "sortNum": 100000,
+      "created": "2026-09-08T07:07:31.572Z",
+      "modified": "2026-09-08T07:07:31.572Z",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "params": [],
+      "tests": [
+        {
+          "type": "res-code",
+          "custom": "",
+          "action": "equal",
+          "value": "204"
+        }
+      ]
+    },
+    {
+      "_id": "0abbad72-473d-428a-9e6b-b02883dc7d7a",
+      "colId": "f93acc5f-6aa6-4e73-8028-d44d9793e39b",
+      "containerId": "",
+      "name": "12 Deleted product is missing",
+      "url": "http://localhost:3001/api/products/{{productId}}",
+      "method": "GET",
+      "sortNum": 110000,
+      "created": "2026-09-08T07:07:31.572Z",
+      "modified": "2026-09-08T07:07:31.572Z",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "params": [],
+      "tests": [
+        {
+          "type": "res-code",
+          "custom": "",
+          "action": "equal",
+          "value": "404"
+        }
+      ]
+    },
+    {
+      "_id": "7ca57954-56c2-4d3f-9d44-597d4f41f115",
+      "colId": "f93acc5f-6aa6-4e73-8028-d44d9793e39b",
+      "containerId": "",
+      "name": "13 Repeat delete",
+      "url": "http://localhost:3001/api/products/{{productId}}",
+      "method": "DELETE",
+      "sortNum": 120000,
+      "created": "2026-09-08T07:07:31.572Z",
+      "modified": "2026-09-08T07:07:31.572Z",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "params": [],
+      "tests": [
+        {
+          "type": "res-code",
+          "custom": "",
+          "action": "equal",
+          "value": "404"
+        }
+      ]
+    }
+  ]
+}

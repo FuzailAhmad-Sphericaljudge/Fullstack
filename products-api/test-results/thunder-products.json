@@ -1,0 +1,340 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Products API",
+    "folderName": "",
+    "environmentName": "Products Local",
+    "collectionId": "f93acc5f-6aa6-4e73-8028-d44d9793e39b",
+    "environmentId": "438fea71-5faf-4c74-84f0-b0397419f9f2",
+    "dateExported": "2026-09-08T07:08:02.903Z",
+    "avgResponseTime": 2,
+    "totalDuration": 271,
+    "totalIterations": 1,
+    "totalPassed": 1,
+    "totalFailed": 0,
+    "failedIterations": [],
+    "iterations": [
+        {
+            "iteration": 1,
+            "duration": 271,
+            "avgResponseTime": 2,
+            "totalRequests": 13,
+            "totalPassed": 13,
+            "totalSkipped": 0,
+            "totalFailed": 0,
+            "requests": [
+                {
+                    "reqId": "b7a8c74b-2aa3-4cdd-916b-7002be4b7f92",
+                    "name": "01 List products",
+                    "method": "GET",
+                    "url": "http://localhost:3001/api/products",
+                    "resCode": 200,
+                    "resTime": 10,
+                    "resTimeText": "10 ms",
+                    "resSize": 184,
+                    "preScriptTime": 4,
+                    "preReqTime": 2,
+                    "reqTime": 36,
+                    "postScriptTime": 1,
+                    "passed": 1,
+                    "total": 1,
+                    "tests": [
+                        {
+                            "name": "Response Code equal to 200 ",
+                            "result": "Pass"
+                        }
+                    ],
+                    "skipped": false,
+                    "resSizeText": "184 Bytes"
+                },
+                {
+                    "reqId": "9814fa3e-5387-4e36-ac26-5698c23ff3e8",
+                    "name": "02 Create product",
+                    "method": "POST",
+                    "url": "http://localhost:3001/api/products",
+                    "resCode": 201,
+                    "resTime": 2,
+                    "resTimeText": "2 ms",
+                    "resSize": 182,
+                    "preScriptTime": 1,
+                    "preReqTime": 3,
+                    "reqTime": 7,
+                    "postScriptTime": 5,
+                    "passed": 1,
+                    "total": 1,
+                    "tests": [
+                        {
+                            "name": "Response Code equal to 201 ",
+                            "result": "Pass"
+                        }
+                    ],
+                    "skipped": false,
+                    "resSizeText": "182 Bytes"
+                },
+                {
+                    "reqId": "b79c2160-84a4-4ad1-bdc5-186475b3f9a4",
+                    "name": "03 Get product",
+                    "method": "GET",
+                    "url": "http://localhost:3001/api/products/2653c910-dbe8-425c-b164-d27ee162f05e",
+                    "resCode": 200,
+                    "resTime": 1,
+                    "resTimeText": "1 ms",
+                    "resSize": 182,
+                    "preScriptTime": 2,
+                    "preReqTime": 0,
+                    "reqTime": 3,
+                    "postScriptTime": 0,
+                    "passed": 1,
+                    "total": 1,
+                    "tests": [
+                        {
+                            "name": "Response Code equal to 200 ",
+                            "result": "Pass"
+                        }
+                    ],
+                    "skipped": false,
+                    "resSizeText": "182 Bytes"
+                },
+                {
+                    "reqId": "10047fca-e689-4a5e-9e9c-40b421149018",
+                    "name": "04 Replace product",
+                    "method": "PUT",
+                    "url": "http://localhost:3001/api/products/2653c910-dbe8-425c-b164-d27ee162f05e",
+                    "resCode": 200,
+                    "resTime": 2,
+                    "resTimeText": "2 ms",
+                    "resSize": 176,
+                    "preScriptTime": 1,
+                    "preReqTime": 1,
+                    "reqTime": 3,
+                    "postScriptTime": 0,
+                    "passed": 1,
+                    "total": 1,
+                    "tests": [
+                        {
+                            "name": "Response Code equal to 200 ",
+                            "result": "Pass"
+                        }
+                    ],
+                    "skipped": false,
+                    "resSizeText": "176 Bytes"
+                },
+                {
+                    "reqId": "9ee8b750-e8d0-4425-b0c9-41ea6bb27b47",
+                    "name": "05 Patch product",
+                    "method": "PATCH",
+                    "url": "http://localhost:3001/api/products/2653c910-dbe8-425c-b164-d27ee162f05e",
+                    "resCode": 200,
+                    "resTime": 2,
+                    "resTimeText": "2 ms",
+                    "resSize": 176,
+                    "preScriptTime": 1,
+                    "preReqTime": 1,
+                    "reqTime": 4,
+                    "postScriptTime": 0,
+                    "passed": 1,
+                    "total": 1,
+                    "tests": [
+                        {
+                            "name": "Response Code equal to 200 ",
+                            "result": "Pass"
+                        }
+                    ],
+                    "skipped": false,
+                    "resSizeText": "176 Bytes"
+                },
+                {
+                    "reqId": "b3daf563-5f44-45d9-a6af-3f5a144061c2",
+                    "name": "06 Reject negative price",
+                    "method": "POST",
+                    "url": "http://localhost:3001/api/products",
+                    "resCode": 400,
+                    "resTime": 2,
+                    "resTimeText": "2 ms",
+                    "resSize": 173,
+                    "preScriptTime": 1,
+                    "preReqTime": 1,
+                    "reqTime": 9,
+                    "postScriptTime": 0,
+                    "passed": 1,
+                    "total": 1,
+                    "tests": [
+                        {
+                            "name": "Response Code equal to 400 ",
+                            "result": "Pass"
+                        }
+                    ],
+                    "skipped": false,
+                    "resSizeText": "173 Bytes"
+                },
+                {
+                    "reqId": "e7ca76b1-1e26-4098-9905-8336e5a9cc51",
+                    "name": "07 Reject empty patch",
+                    "method": "PATCH",
+                    "url": "http://localhost:3001/api/products/2653c910-dbe8-425c-b164-d27ee162f05e",
+                    "resCode": 400,
+                    "resTime": 1,
+                    "resTimeText": "1 ms",
+                    "resSize": 106,
+                    "preScriptTime": 1,
+                    "preReqTime": 1,
+                    "reqTime": 3,
+                    "postScriptTime": 0,
+                    "passed": 1,
+                    "total": 1,
+                    "tests": [
+                        {
+                            "name": "Response Code equal to 400 ",
+                            "result": "Pass"
+                        }
+                    ],
+                    "skipped": false,
+                    "resSizeText": "106 Bytes"
+                },
+                {
+                    "reqId": "1fd7c3dd-a44c-4a19-820d-4ff5ae203df5",
+                    "name": "08 Reject malformed JSON",
+                    "method": "POST",
+                    "url": "http://localhost:3001/api/products",
+                    "resCode": 400,
+                    "resTime": 1,
+                    "resTimeText": "1 ms",
+                    "resSize": 29,
+                    "preScriptTime": 1,
+                    "preReqTime": 0,
+                    "reqTime": 3,
+                    "postScriptTime": 0,
+                    "passed": 1,
+                    "total": 1,
+                    "tests": [
+                        {
+                            "name": "Response Code equal to 400 ",
+                            "result": "Pass"
+                        }
+                    ],
+                    "skipped": false,
+                    "resSizeText": "29 Bytes"
+                },
+                {
+                    "reqId": "fe5426bf-a08e-4351-8728-05af7f18e00b",
+                    "name": "09 Reject content type",
+                    "method": "POST",
+                    "url": "http://localhost:3001/api/products",
+                    "resCode": 415,
+                    "resTime": 1,
+                    "resTimeText": "1 ms",
+                    "resSize": 46,
+                    "preScriptTime": 1,
+                    "preReqTime": 0,
+                    "reqTime": 3,
+                    "postScriptTime": 0,
+                    "passed": 1,
+                    "total": 1,
+                    "tests": [
+                        {
+                            "name": "Response Code equal to 415 ",
+                            "result": "Pass"
+                        }
+                    ],
+                    "skipped": false,
+                    "resSizeText": "46 Bytes"
+                },
+                {
+                    "reqId": "cf618863-7ecc-4d44-ae4f-7e30a4c9c5c8",
+                    "name": "10 Reject unsupported method",
+                    "method": "PUT",
+                    "url": "http://localhost:3001/api/products",
+                    "resCode": 405,
+                    "resTime": 1,
+                    "resTimeText": "1 ms",
+                    "resSize": 30,
+                    "preScriptTime": 1,
+                    "preReqTime": 0,
+                    "reqTime": 3,
+                    "postScriptTime": 0,
+                    "passed": 1,
+                    "total": 1,
+                    "tests": [
+                        {
+                            "name": "Response Code equal to 405 ",
+                            "result": "Pass"
+                        }
+                    ],
+                    "skipped": false,
+                    "resSizeText": "30 Bytes"
+                },
+                {
+                    "reqId": "a19271c1-fcbf-4197-b6f7-f296d4696994",
+                    "name": "11 Delete product",
+                    "method": "DELETE",
+                    "url": "http://localhost:3001/api/products/2653c910-dbe8-425c-b164-d27ee162f05e",
+                    "resCode": 204,
+                    "resTime": 1,
+                    "resTimeText": "1 ms",
+                    "resSize": 0,
+                    "preScriptTime": 1,
+                    "preReqTime": 0,
+                    "reqTime": 2,
+                    "postScriptTime": 0,
+                    "passed": 1,
+                    "total": 1,
+                    "tests": [
+                        {
+                            "name": "Response Code equal to 204 ",
+                            "result": "Pass"
+                        }
+                    ],
+                    "skipped": false,
+                    "resSizeText": "0 Bytes"
+                },
+                {
+                    "reqId": "0abbad72-473d-428a-9e6b-b02883dc7d7a",
+                    "name": "12 Deleted product is missing",
+                    "method": "GET",
+                    "url": "http://localhost:3001/api/products/2653c910-dbe8-425c-b164-d27ee162f05e",
+                    "resCode": 404,
+                    "resTime": 1,
+                    "resTimeText": "1 ms",
+                    "resSize": 29,
+                    "preScriptTime": 2,
+                    "preReqTime": 1,
+                    "reqTime": 2,
+                    "postScriptTime": 0,
+                    "passed": 1,
+                    "total": 1,
+                    "tests": [
+                        {
+                            "name": "Response Code equal to 404 ",
+                            "result": "Pass"
+                        }
+                    ],
+                    "skipped": false,
+                    "resSizeText": "29 Bytes"
+                },
+                {
+                    "reqId": "7ca57954-56c2-4d3f-9d44-597d4f41f115",
+                    "name": "13 Repeat delete",
+                    "method": "DELETE",
+                    "url": "http://localhost:3001/api/products/2653c910-dbe8-425c-b164-d27ee162f05e",
+                    "resCode": 404,
+                    "resTime": 1,
+                    "resTimeText": "1 ms",
+                    "resSize": 29,
+                    "preScriptTime": 1,
+                    "preReqTime": 0,
+                    "reqTime": 2,
+                    "postScriptTime": 0,
+                    "passed": 1,
+                    "total": 1,
+                    "tests": [
+                        {
+                            "name": "Response Code equal to 404 ",
+                            "result": "Pass"
+                        }
+                    ],
+                    "skipped": false,
+                    "resSizeText": "29 Bytes"
+                }
+            ]
+        }
+    ]
+}

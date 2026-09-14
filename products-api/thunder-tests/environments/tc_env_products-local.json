@@ -1,0 +1,14 @@
+{
+    "_id": "438fea71-5faf-4c74-84f0-b0397419f9f2",
+    "name": "Products Local",
+    "default": true,
+    "sortNum": 10000,
+    "created": "2026-09-08T07:07:31.572Z",
+    "modified": "2026-09-08T07:07:31.572Z",
+    "data": [
+        {
+            "name": "productId",
+            "value": "2653c910-dbe8-425c-b164-d27ee162f05e"
+        }
+    ]
+}
