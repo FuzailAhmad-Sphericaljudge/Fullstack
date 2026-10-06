@@ -1,0 +1,8 @@
+body { font-family: Arial, sans-serif; text-align: center; background: #a8dadc; margin: 0; padding: 30px 16px; }
+h1 { font-size: 48px; margin-bottom: 24px; }
+#search { width: 100%; max-width: 480px; padding: 14px; font-size: 20px; border: 2px solid #000; border-radius: 6px; box-sizing: border-box; }
+#results { margin-top: 20px; }
+.note { margin: 14px 0; }
+.note h3 { margin: 0 0 6px; font-size: 22px; }
+.note a button { padding: 4px 10px; font-size: 16px; cursor: pointer; }
+.empty { font-size: 18px; color: #333; }

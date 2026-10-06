@@ -1,0 +1,13 @@
+{
+  "name": "notes-portal-app",
+  "version": "1.0.0",
+  "description": "Simple notes search and download portal using Express and a REST API",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
